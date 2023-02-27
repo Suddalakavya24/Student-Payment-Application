@@ -1,0 +1,71 @@
+{% extends "layout.html" %}
+{% block content %}
+<div>
+  <section class="vh-50" style="background-color: white;">
+    <div class="container h-100" style="width:70rem">
+      <div class="row d-flex justify-content-center align-items-center h-30">
+        <div class="col-lg-12 col-xl-11">
+          <div class="card text-black" style="border-radius: 25px;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
+            <div class="card-body">
+              <div class="row justify-content-center">
+                <div class="col-md-10 col-lg-6 col-xl-5 order-2 order-lg-1">
+
+                  <p class="text-center h1 fw-bold mb-5 mx-1 mx-md-4 mt-4">Pay Here</p>
+
+                  <form class="mx-1 mx-md-4" method="POST" action="">
+                    {{ form.hidden_tag() }}
+                    <div>
+                      <label for="inputEmail4" class="form-label">Official Email-ID</label>
+                      <input type="email" class="form-control" id="inputEmail4" placeholder={{current_user.email}} disabled>
+                    </div>
+                    <br>
+                    <div>
+                      <label for="inputName" class="form-label">Student Name</label>
+                      <input type="text" class="form-control" id="inputName" placeholder={{current_user.username}} disabled>
+                    </div>
+                    <br>
+                    <div>
+                      <label for="inputRoll" class="form-label">Roll Number</label>
+                      <input type="text" class="form-control" id="inputRoll" placeholder={{current_user.rollnumber}} disabled>
+                    </div>
+                    <br>
+                    <div>
+                      <label for="inputBranch" class="form-label">Branch</label>
+                      <input type="text" class="form-control" id="inputBranch" placeholder={{current_user.branch}} disabled>
+                    </div>
+                    <br>
+                    <div>
+                      {{form.myField.label(class="form-control-label")}}
+                      <br />
+                      {{form.myField(class="form-select")}}
+                    </div>
+                    <br>
+                    <div>
+                      {{form.amount.label(class="form-control-label")}}
+                      <br />
+                      {{form.amount(class="form-control",pattern="[0-9]+")}}
+                    </div>
+                    <br> 
+                    <div style="display:flex">
+                    <div class="mx-2">
+                      {{form.cancel(class="btn btn-outline-dark")}}
+                     </div>               
+                    <div>
+                      {{form.submit(class="btn btn-outline-dark")}}
+                    </div>
+                  </div> 
+                  </form>
+                </div>
+                <div class="col-md-10 col-lg-6 col-xl-7 d-flex align-items-center order-1 order-lg-2">
+                  <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-registration/draw1.webp"
+                    class="img-fluid" alt="Sample image">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+{% endblock content %}

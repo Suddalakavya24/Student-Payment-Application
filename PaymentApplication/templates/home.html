@@ -1,0 +1,32 @@
+{% extends "layout.html" %}
+{% block content %}
+
+<div style="display:flex;justify-content:center" >
+<a class="nav-item nav-link m-4" href="{{url_for('payment')}}">
+    <div class="card p-card m-3" style="width:100%;border-radius:10px;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
+        <div class="card-statistic-3 p-4">
+            <div class="card-icon card-icon-large"></div>
+            <div class="">
+
+                <img src="https://img.icons8.com/fluency/80/null/card-in-use.png"/>
+                <br>
+                <h6 class="card-title mb-0">Make A Payment</h6>
+            </div>
+        </div>
+    </div>
+</a>
+
+<a class="nav-item nav-link m-4" href="{{url_for('reports')}}" >
+    <div class="card p-card m-3" style="width:100%;border-radius:10px;box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
+        <div class="card-statistic-3 p-4">
+            <div class="card-icon card-icon-large"></div>
+            <div class="">
+                <img src="https://img.icons8.com/clouds/80/null/payment-history.png"/>
+                <br>
+                <h6 class="card-title mb-0">View Payment History</h6>
+            </div>
+        </div>
+    </div>
+</a>
+</div>
+{% endblock content %}

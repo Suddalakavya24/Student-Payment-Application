@@ -1,0 +1,42 @@
+{% extends "layout.html" %}
+{% block content %}
+
+<div>
+    <h3>Payment History</h3>
+</div>
+<br>
+<div>
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Payment Category</th>
+                <th scope="col">Amount</th>
+                <th scope="col">Payment Date</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for tr in t.items %}
+            <tr>
+                <th scope="row">{{loop.index}}</th>
+                <td>{{tr.type}} Fee</td>
+                <td>Rs. {{tr.amount}}</td>
+                <td>{{tr.date.day}}-{{tr.date.month}}-{{tr.date.year}}&nbsp;&nbsp;{{tr.date.hour}}:{{tr.date.minute}}:{{tr.date.second}}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+    <div style="justify-content:center;display:flex" >
+         {% for num in t.iter_pages() %}
+           {% if num %}
+                {% if t.page == num %}
+                <a class="btn btn-dark mb-4"href="{{ url_for('reports',page=num) }}">{{ num }}</a>
+                {% else %}
+                <a class="btn btn-outline-dark mb-4"href="{{ url_for('reports',page=num) }}">{{ num }}</a>
+                {% endif %}
+                &nbsp;
+           {% endif %}
+         {% endfor %}
+    </div>
+{% endblock content %}

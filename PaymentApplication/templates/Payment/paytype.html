@@ -1,0 +1,58 @@
+{% extends "layout.html" %}
+{% block content %}
+<div class="card mx-auto" style="width: 38rem;background-color:white; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
+    <div class="card-body">
+        <form method="POST" action="">
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="flexRadioDefault" value="Card" id="flexRadioDefault2" checked />
+                <label class="form-check-label" for="flexRadioDefault2"> Pay with Debit/Credit/ATM Cards </label>
+                <p style="font-size:small" class="text-muted">You can save your cards as per new RBI guidelines. <a
+                        href="#" style="font-size:13px">Learn More</a></p>
+                <img src="https://img.icons8.com/color/48/null/visa.png" />&nbsp;
+                <img src="https://img.icons8.com/color/48/null/maestro.png" /> &nbsp;
+                <img src="https://img.icons8.com/color/48/null/rupay.png" />&nbsp;
+                <img src="https://img.icons8.com/stickers/48/null/mastercard.png" />&nbsp;&nbsp;
+                <img src="https://img.icons8.com/ios/40/null/amex.png" />&nbsp;&nbsp;
+                <img src="https://img.icons8.com/ios-filled/36/null/capital-one.png" />
+            </div>
+            <br>
+            <div class="form-check">
+                <input class="form-check-input"  value="Netbanking" type="radio" name="flexRadioDefault" id="flexRadioDefault1" />
+                <label class="form-check-label" for="flexRadioDefault1"> Net Banking </label>
+                <p></p>
+                <img src="https://img.icons8.com/clouds/48/null/bank-building.png"/>
+            </div>
+            <br>
+            <div class="form-check">
+                <input class="form-check-input" value="Upi" type="radio" name="flexRadioDefault" id="flexRadioDefault1" />
+                <label class="form-check-label" for="flexRadioDefault1"> Other UPI Apps</label>
+                <p></p>
+                <img src="https://img.icons8.com/cute-clipart/40/null/google-pay-india.png" />
+                &nbsp;
+                <img src="https://img.icons8.com/color/40/null/paytm.png" />
+                &nbsp;
+                <img src="https://img.icons8.com/external-those-icons-lineal-color-those-icons/34/null/external-Amazon-payment-methods-those-icons-lineal-color-those-icons.png"/>
+            
+                <img src="https://img.icons8.com/color/40/null/bhim.png" />
+            </div>
+            <br>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" value="Emi" name="flexRadioDefault" id="flexRadioDefault1"
+                    disabled="True" />
+                <label class="form-check-label" for="flexRadioDefault1">EMI Unavailable</label>
+                <a style="font-size:13px"href="#">Why?</a>
+            </div>
+            <br>
+            <div class="form-check">
+                <input class="form-check-input" value="Cod" type="radio" name="flexRadioDefault" id="flexRadioDefault1" />
+                <label class="form-check-label" for="flexRadioDefault1">Cash On Delivery/Pay On Delivery</label>
+            </div>
+            <br>
+            <p>Scan & Pay using Amazon App. Cash, UPI, Cards also accepted. <a style="font-size:13px" href="#">Know more</a></p>
+            <button class="btn btn-outline-dark sm">Make Payment</button>
+        </form>
+    </div>
+</div>
+
+
+{% endblock content %}
