@@ -8,7 +8,7 @@ app.config['SECRET_KEY'] ='38f63965b699a92c103454bfe63a4e96'
 app.config['SQLALCHEMY_DATABASE_URI']='sqlite:///site.db'
 db=SQLAlchemy(app)
 bcrypt=Bcrypt(app)
-app.config['SERVER_NAME']='localhost:5000'
+app.config['SERVER_NAME']='llocalhost.localdomain:5000'
 
 
 

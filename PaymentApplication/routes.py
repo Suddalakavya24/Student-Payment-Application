@@ -27,7 +27,7 @@ def register():
 
 
 
-@app.route("/home")
+@app.route("/home",methods=['GET'])
 @login_required
 def home():
     return render_template('home.html')
